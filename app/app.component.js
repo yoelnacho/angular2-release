@@ -9,13 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+// defino el modelo de datos (el tipo de c/var)
+var Example = (function () {
+    function Example() {
+    }
+    return Example;
+}());
+exports.Example = Example;
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'Angular 2';
+        this.eg = {
+            imgUrl: 'assets/logo.png',
+            name: 'Angular 2'
+        };
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular App</h1>'
+            templateUrl: './app/app.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
