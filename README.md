@@ -1,5 +1,5 @@
 # Angular 2 Release
-> sOfficial documentation [Quick start](https://angular.io/docs/ts/latest/quickstart.html)
+> Official documentation [Quick start](https://angular.io/docs/ts/latest/quickstart.html)
 
 [![N|Solid](https://media.licdn.com/mpr/mpr/shrink_100_100/p/1/000/27b/311/035ee03.png)](https://angular.io)
 
