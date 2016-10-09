@@ -6,3 +6,13 @@
 <img [src]="eg.imgUrl" alt="{{name}}" />
 
 <button (click)="setName('ReactJs')">Cambiar título</button>
+
+<p *ngIf="mostrar1">1- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore consequuntur quas dignissimos esse ullam ut nisi voluptas ea, magnam assumenda sequi sed recusandae quidem animi laudantium quam nesciunt! Earum, tempora?</p>
+<p *ngIf="mostrar2">2- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore consequuntur quas dignissimos esse ullam ut nisi voluptas ea, magnam assumenda sequi sed recusandae quidem animi laudantium quam nesciunt! Earum, tempora?</p>
+
+<hr>
+<ul *ngFor="let item of lista">
+    <li>
+        {{item.desc}} <strong *ngIf="item.check">ok</strong>
+    </li>
+</ul>

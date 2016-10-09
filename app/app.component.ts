@@ -15,6 +15,16 @@ export class Example {
 export class AppComponent {
     title = 'Angular 2';
 
+    mostrar1 = true;
+    mostrar2 = false;
+
+    lista = [
+        {desc: 'Elemento 1', check: true },
+        {desc: 'Elemento 2', check: false },
+        {desc: 'Elemento 3', check: false },
+        {desc: 'Elemento 4', check: true }
+    ]
+
     eg: Example = {
         imgUrl: 'assets/logo.png',
         name: 'Angular 2'

@@ -19,6 +19,14 @@ exports.Example = Example;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Angular 2';
+        this.mostrar1 = true;
+        this.mostrar2 = false;
+        this.lista = [
+            { desc: 'Elemento 1', check: true },
+            { desc: 'Elemento 2', check: false },
+            { desc: 'Elemento 3', check: false },
+            { desc: 'Elemento 4', check: true }
+        ];
         this.eg = {
             imgUrl: 'assets/logo.png',
             name: 'Angular 2'
