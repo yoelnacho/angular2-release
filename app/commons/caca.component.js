@@ -8,29 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// agregar input para tomar el parámetro que pasan entre componentes
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var caca_component_1 = require('./commons/caca.component');
-var AppModule = (function () {
-    function AppModule() {
+var CacaComponent = (function () {
+    function CacaComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                caca_component_1.CacaComponent
-            ],
-            bootstrap: [app_component_1.AppComponent]
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], CacaComponent.prototype, "title", void 0);
+    CacaComponent = __decorate([
+        core_1.Component({
+            selector: 'caca',
+            template: "<h1>{{title}}</h1>"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], CacaComponent);
+    return CacaComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.CacaComponent = CacaComponent;
+//# sourceMappingURL=caca.component.js.map
