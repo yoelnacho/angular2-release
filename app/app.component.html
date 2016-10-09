@@ -11,8 +11,28 @@
 <p *ngIf="mostrar2">2- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore consequuntur quas dignissimos esse ullam ut nisi voluptas ea, magnam assumenda sequi sed recusandae quidem animi laudantium quam nesciunt! Earum, tempora?</p>
 
 <hr>
-<ul *ngFor="let item of lista">
-    <li>
+<ul>
+    <li *ngFor="let item of lista">
         {{item.desc}} <strong *ngIf="item.check">ok</strong>
     </li>
 </ul>
+
+<hr>
+<h2>A checklist</h2>
+
+<p *ngIf="checklist == 0">There are no items yet.</p>
+
+<ul *ngIf="checklist.length > 0">
+    <li *ngFor="let list of checklist">
+        <input type="checkbox" [(ngModel)]="list.selected">
+        <!-- pueden existir varias condiciones para distintas clases
+        por ejemlo:
+        <span [class.tachado]="item.selected"
+              [class.negrita]="item.important">{{ item.name }}</span>
+        -->
+        <span [class.tachado]="list.selected">{{ list.desc }}</span>
+        <button type="button" (click)="delete(item)" name="button">Delete</button></li>
+</ul>
+<hr>
+<input type="text" #newItem placeholder="Enter the description...">
+<button type="button" (click)="update(newItem.value); newItem.value=''" name="button">Add</button>

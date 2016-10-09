@@ -9,7 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// defino el modelo de datos (el tipo de c/var)
+// defino los atributos y tipos de valores que contendran
+// si voy a utilizar métodos, utilizo una class para definir el modelo de atributos.
 var Example = (function () {
     function Example() {
     }
@@ -31,15 +32,32 @@ var AppComponent = (function () {
             imgUrl: 'assets/logo.png',
             name: 'Angular 2'
         };
+        // Checklist
+        this.checklist = [];
     }
     // fn que toma el valor al hacer click en el botón
     AppComponent.prototype.setName = function (title) {
         this.title = title;
     };
+    AppComponent.prototype.update = function (data) {
+        this.checklist.push({ desc: data, selected: false });
+    };
+    ;
+    // Hacer una búsqueda por referencia
+    AppComponent.prototype.delete = function (item) {
+        // busco la posición del elemento en el array checklist
+        var index = this.checklist.indexOf(item);
+        // y si es > 1
+        if (index > -1) {
+            // con splice, lo remuevo del array
+            this.checklist.splice(index, 1);
+        }
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: './app/app.component.html'
+            templateUrl: './app/app.component.html',
+            styleUrls: ['./app/app.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
