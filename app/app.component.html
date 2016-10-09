@@ -1,3 +1,8 @@
+<!-- cambio el valor de la variable title -->
+<input type="text" [(ngModel)]="title" />
+
 <h1>Bienvenidos a {{ title }}</h1>
 
 <img [src]="eg.imgUrl" alt="{{name}}" />
+
+<button (click)="setName('ReactJs')">Cambiar título</button>

@@ -14,8 +14,14 @@ export class Example {
 // Utilizo la classe Example para crear un nuevo modelo.
 export class AppComponent {
     title = 'Angular 2';
+
     eg: Example = {
         imgUrl: 'assets/logo.png',
         name: 'Angular 2'
     };
+
+    // fn que toma el valor al hacer click en el botón
+    setName(title:string){
+        this.title = title;
+    }
 }

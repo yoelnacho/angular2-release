@@ -24,6 +24,10 @@ var AppComponent = (function () {
             name: 'Angular 2'
         };
     }
+    // fn que toma el valor al hacer click en el botón
+    AppComponent.prototype.setName = function (title) {
+        this.title = title;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
